@@ -9,6 +9,13 @@
 ##      - If a link is italicized, do not follow it
 ##      - If a link is enclosed in parantheses, do not follow it
 ##
+##  Uses an orderedDict to keep track of pages that have been visited.
+##  Initially used a regular python set but a set doesn't preserve the order
+##  of the elements. So, the exact order in which the links are visited is not
+##  preserved. The ordered dict solves that problem of ordering while also
+##  allowing for unique keys. Thus, we can easily detect if we ever go back and
+##  visit a page again.
+##
 ##  ** Note **
 ##      - This version doesn't do anything special with redirects. It follows a
 ##        a redirect blindly.
