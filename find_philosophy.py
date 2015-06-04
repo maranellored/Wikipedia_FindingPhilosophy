@@ -149,14 +149,16 @@ def run():
         article = get_first_linked_article(response.text)
 
     # Finished finding all the pages till Philosophy.
-    print "Found {} pages from {} to Philosophy\n" \
-        .format(len(visited_articles), visited_articles.keys()[0].title())
+    #print "Found {} pages from {} to Philosophy\n" \
+    #    .format(len(visited_articles), visited_articles.keys()[0].title())
 
     print "Articles: "
     for a in visited_articles.keys():
         # use the title method to create upper case words for better
         # presentation
         print "- {}".format(a.title())
+
+    print "{}".format(len(visited_articles))
 
 if __name__ == '__main__':
     run()
